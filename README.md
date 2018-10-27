@@ -2,6 +2,10 @@
 
 Defines a JSON standard to communicate dock receipt information between parties.
 
+## Current Version
+
+0.1
+
 ## What is a dock reciept?
 
 As defined on https://www.globalnegotiator.com/international-trade/dictionary/dock-receipt/
