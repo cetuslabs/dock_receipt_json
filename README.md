@@ -94,17 +94,14 @@ destination. Dock receipts are normally prepared by forwarders or shippers.
 
 ## Attributes Defined:
 
-dock_receipt_number: Number to identify dock receipt
-
-booking_number: Number to identify booking
-
-shipper_name: Shipper Name
-
-truck[license_plate]: License plate of truck
-
-truck[company_name]: The trucking company name
-
-cargoes: Array of cargo associated to dock receipt
+| Attribute | Description |
+| --- | --- |
+| dock_receipt_number | Number to identify dock receipt |
+| booking_number | Number to identify booking |
+| shipper_name | Shipper Name |
+| truck[license_plate] | License plate of truck that carried the cargo |
+| truck[company_name] | The trucking company name of the truck that carried the cargo |
+| cargoes | Array of cargo associated to dock receipt |
 
 
 ### Cargoes Attributes:
