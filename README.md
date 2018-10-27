@@ -94,6 +94,9 @@ destination. Dock receipts are normally prepared by forwarders or shippers.
 
 ## Attributes Defined:
 
+The first section of the JSON structure should answer questions about the delivery.
+For example, what is the booking number for this cargo? Who made the delivery?
+
 | Attribute | Description |
 | --- | --- |
 | dock_receipt_number | Number to identify dock receipt |
@@ -105,38 +108,31 @@ destination. Dock receipts are normally prepared by forwarders or shippers.
 
 
 ### Cargoes Attributes:
-cargo_type: String to identify the type of cargo. Example: "breakbulk", "vehicle" and "boat".
 
-height: Value to specify height of cargo
+This second segment of the JSON structure has the basic qualities all cargo might have regardless of the type of cargo.
+For example, measurements, quantity.
 
-length: Value to specify length of cargo
-
-width: Value to specify width of cargo
-
-dimension_unit: Value to specify the unit used for the dimensions (feet, inches...) 
-
-weight: Value to specify weight of cargo
-
-weight_unit: Value to specify the unit used for the weight (lb,kg...)
-
-quantity: Amount of items
-
-description: A description of the cargo. Free text.
-
-hazmat_codes[code]: The standard hazmat code
-
-hazmat_codes[class]: The hazmat class related to the code
-
-hazmat_codes[name]: The hazmat class name
-
-extras: A key value pair of data. This can be any extra field the parties agree to use.
+| Attribute | Description |
+| --- | --- |
+| cargo_type | String to identify the type of cargo. Example: "breakbulk", "vehicle" and "boat" |
+| height | Value to specify height of cargo |
+| length | Value to specify length of cargo |
+| width | Value to specify width of cargo |
+| dimension_unit | Value to specify the unit used for the dimensions (feet, inches...) | 
+| weight | Value to specify weight of cargo |
+| weight_unit | Value to specify the unit used for the weight (lb,kg...) |
+| quantity | Amount of items |
+| description | A description of the cargo. Free text. |
+| hazmat_codes[code] | The standard hazmat code |
+| hazmat_codes[class] | The hazmat class related to the code |
+| hazmat_codes[name] | The hazmat class name |
+| extras | A key value pair of data. This can be any extra field the parties agree to use. |
 
 ### The extras attribute
-This is the object that should be able to give us the flexibility we will need.
-In this object we can put any key value pair we agree on.
-In the example above you can see that the vehicle and boat cargo have extra
-values that the break bulk item doesn’t have.
+This is the JSON object that should be able to give users the flexibility to define any extra attributes they need.
+In other words, users can agree on the different key value attributes they would like to user for their operation.
 
+In the example above you can see that the vehicle and boat cargo have extra values that the break bulk item doesn’t have.
 
 ### Extra Notes
 All values will be send as a string except for the quantity value which is a
