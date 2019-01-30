@@ -52,7 +52,8 @@ destination. Dock receipts are normally prepared by forwarders or shippers.
           }   
       ],
       "extras" : {
-      }
+      },
+      "attachments": []
     },
     {
       "cargo_type" : "vehicle",
@@ -71,7 +72,14 @@ destination. Dock receipts are normally prepared by forwarders or shippers.
         "model": "Accord",
         "year": "2017", 
         "color": "turquoise"
-      }
+      },
+      "attachments": [
+        {
+          "type": "image",
+          "title": "Container Image",
+          "url": "http://domain.com/containers/10964/images/1"
+        }
+      ]
     },
     {
       "cargo_type" : "boat",
@@ -90,7 +98,19 @@ destination. Dock receipts are normally prepared by forwarders or shippers.
         "model": "105 Jet",
         "year": "2017", 
         "color": "navy blue"
-      }
+      },
+      "attachments": [
+        {
+          "type": "image",
+          "title": null,
+          "url": "http://domain.com/containers/10286/images/2"
+        },
+        {
+          "type": "image",
+          "title": "Side Damage",
+          "url": "http://domain.com/containers/10286/images/3"
+        }
+      ]
     }
   ]
 }
@@ -131,13 +151,13 @@ For example, measurements, quantity.
 | hazmat_codes[class] | The hazmat class related to the code |
 | hazmat_codes[name] | The hazmat class name |
 | extras | A key value pair of data. This can be any extra field the parties agree to use. |
+| attachments | An array of key value pairs of data. These refer to cargo attachments such as images. |
 
 ### The extras attribute
 This is the JSON object that should be able to give users the flexibility to define any extra attributes they need.
-In other words, users can agree on the different key value attributes they would like to user for their operation.
+In other words, users can agree on the different key-value attributes they would like to user for their operation.
 
 In the example above you can see that the vehicle and boat cargo have extra values that the break bulk item doesn’t have.
 
 ### Extra Notes
-All values will be send as a string except for the quantity value which is a
-integer.
+All values will be sent as strings except for the quantity value which is an integer.
